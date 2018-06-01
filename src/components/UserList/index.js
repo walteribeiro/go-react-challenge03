@@ -34,7 +34,7 @@ class UserList extends Component {
       <Container>
         { loading
           ? <Loading />
-          : hasUsers ? users.map(this.renderUser) : <NoDataContainer><p>Nenhum usuário cadastrado</p></NoDataContainer> }
+          : hasUsers ? users.map(this.renderUser) : <NoDataContainer><p>No registered users</p></NoDataContainer> }
       </Container>
     );
   }

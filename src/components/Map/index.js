@@ -16,7 +16,7 @@ export class Map extends Component {
       height: window.innerHeight,
       latitude: 49.88665469,
       longitude: -97.16485231,
-      zoom: 14,
+      zoom: 12,
     },
   }
 
@@ -79,7 +79,7 @@ export class Map extends Component {
         <ReactMapGL
           {...this.state.viewport}
           onClick={this.handleMapClick}
-          mapStyle="mapbox://styles/mapbox/basic-v9"
+          mapStyle="mapbox://styles/walteribeiro/cjhva9dxw0e2j2rlp88ru7k4k"
           mapboxApiAccessToken="pk.eyJ1Ijoid2FsdGVyaWJlaXJvIiwiYSI6ImNqaHV0Ym03aTByNnEzdm41dTV2cWgxaXMifQ.tdOfds6pAm1E0YB2zuZggQ"
           onViewportChange={viewport => this.setState({ viewport })}
         >

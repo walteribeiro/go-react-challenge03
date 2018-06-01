@@ -10,7 +10,7 @@ export function* addUser(action) {
     const existsUser = yield select(state => state.users.data.find(user => user.id === data.id));
 
     if (existsUser) {
-      yield put(UserActions.addUserFailure('Usuário já foi cadastrado.'));
+      yield put(UserActions.addUserFailure('User already registered.'));
     } else if (data.name) {
       const userData = {
         id: data.id,
@@ -20,11 +20,11 @@ export function* addUser(action) {
         latitude: action.payload.latitude,
         longitude: action.payload.longitude,
       };
-      yield put(UserActions.addUserSuccess(userData, 'Usuário adicionado com sucesso.'));
+      yield put(UserActions.addUserSuccess(userData, 'User added successfully.'));
     } else {
-      yield put(UserActions.addUserFailure('Usuário não existe.'));
+      yield put(UserActions.addUserFailure('User does not exist.'));
     }
   } catch (error) {
-    yield put(UserActions.addUserFailure('Erro ao adicionar o usuário.'));
+    yield put(UserActions.addUserFailure('Error adding user.'));
   }
 }

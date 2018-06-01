@@ -36,7 +36,7 @@ export default function users(state = INITIAL_STATE, action) {
     case Types.REMOVE:
       return {
         ...state,
-        successMessage: 'Usuário removido com sucesso.',
+        successMessage: 'User successfully removed.',
         errorMessage: null,
         data: state.data.filter(user => user.id !== action.payload.id),
       };
